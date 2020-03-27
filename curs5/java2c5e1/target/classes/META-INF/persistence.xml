@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="java2c5PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+        <class>db.Persoana</class>
+        <class>db.Adresa</class>
+
+        <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+
+        <!-- ALL - toate entitatile sunt cache uite -->
+        <!-- NONE - nicio entitate nu este cache uita -->
+        <!-- ENABLE_SELECTIVE - implicit, nicio entitate nu este cache-uita,
+                                si selectam noi entitatile pe care vrem sa le cache uim
+                                adnotandu-le cu @Cacheable  -->
+        <!-- DISABLE_SELECTIVE - implicit, toate entitatile sunt cacheuite,
+                                si selectam noi entitatile pe care NU vrem sa le cache uim
+                                adnotandu-le cu @Cacheable(false)  -->
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/java2c5"/>
+            <property name="javax.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
