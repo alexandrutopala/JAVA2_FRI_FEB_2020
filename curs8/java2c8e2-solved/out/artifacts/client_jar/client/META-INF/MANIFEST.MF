@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: C:\Users\student1\java2c8e2-p\client\src\client\MainClient.j
+ ava
+
