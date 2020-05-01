@@ -1,0 +1,4 @@
+module server {
+
+    requires lib;
+}
